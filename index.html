@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound of Wind - Interactive Sound Installation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#technical">Technical</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Sound of Wind</h1>
+                
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About the Project</h2>
+            <div class="content">
+                <p>Sound of Wind is an interactive ssound installation that transforms environmental data into an immersive auditory experience. The project bridges the gap between meteorological data and artistic expression by converting Hong Kong's wind patterns into a dynamic sound installation.</p>
+                
+                <p>This installation creates a unique dialogue between natural phenomena and digital sound, allowing visitors to experience wind data through an artistic interpretation of sound and movement. The project demonstrates how environmental data can be transformed into meaningful artistic expressions, creating a new perspective on our relationship with natural phenomena.</p>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <h2>Gallery</h2>
+            <div class="media-container">
+                <div class="video-showcase">
+                    <div class="video-wrapper">
+                        <!-- 视频将在这里添加 -->
+                        <div class="video-placeholder">Installation Video Coming Soon</div>
+                    </div>
+                </div>
+                <div class="image-showcase">
+                    <div class="image-grid">
+                        <div class="image-item">
+                            <img src="images/concept.jpg" alt="Installation Hardware Setup">
+                            <p class="caption">Physical installation setup with fans and Arduino control system</p>
+                        </div>
+                        <div class="image-item">
+                            <img src="images/data-visualization.jpg" alt="Wind Data Visualization">
+                            <p class="caption">Wind speed data visualization from HK Observatory</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="technical" class="technical">
+            <h2>Technical Details</h2>
+            <div class="content">
+                <div class="tech-section">
+                    <h3>Data Processing & Control System</h3>
+                    <div class="tech-grid">
+                        <div class="tech-image">
+                            <img src="images/maxmsp.jpg" alt="MaxMSP Patch">
+                            <p class="caption">Sound Processing System in MaxMSP</p>
+                        </div>
+                        <div class="tech-description">
+                            <h4>Sound Processing</h4>
+                            <ul>
+                                <li>MaxMSP patch for real-time sound generation</li>
+                                <li>Multiple audio layers controlled by wind data</li>
+                                <li>Dynamic sound modulation based on wind patterns</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-section">
+                    <h3>Hardware Control</h3>
+                    <div class="tech-grid">
+                        <div class="tech-image">
+                            <img src="images/arduino-code.jpg" alt="Arduino Code">
+                            <p class="caption">Arduino Control System</p>
+                        </div>
+                        <div class="tech-description">
+                            <h4>Arduino Implementation</h4>
+                            <ul>
+                                <li>Four motor control pins (5, 6, 12, 13)</li>
+                                <li>Two speed control pins (9, 10)</li>
+                                <li>Wind speed data mapping (0-80 km/h to 0-255)</li>
+                                <li>Real-time fan speed adjustment based on data input</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-section">
+                    <h3>Data Collection & Processing</h3>
+                    <ul>
+                        <li>Source: Hong Kong Observatory wind speed data (one year period)</li>
+                        <li>Data Processing: Excel-based cleaning and normalization</li>
+                        <li>Value Mapping: Wind speed conversion from 0-80 km/h to 0-255 scale</li>
+                        <li>Visualization: Line chart plotting for data analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sound of Wind Installation. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
