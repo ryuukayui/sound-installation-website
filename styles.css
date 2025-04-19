@@ -58,7 +58,7 @@ section {
 .hero {
     height: 100vh;
     position: relative;
-    background-image: url('images/concept.jpg');
+    background-color: #333;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -95,18 +95,32 @@ section {
 .hero .subtitle {
     font-size: 1.8rem;
     color: #fff;
+    margin-bottom: 1rem;
+}
+
+.hero .subtitle-2 {
+    font-size: 1.4rem;
+    color: #ccc;
     margin-bottom: 2rem;
 }
 
 .hero .author {
     font-size: 1.2rem;
-    color: #ccc;
+    color: #fff;
     margin-bottom: 0.5rem;
+}
+
+.hero .author-name {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 0.3rem;
+    font-weight: 300;
 }
 
 .hero .date {
     font-size: 1rem;
     color: #999;
+    margin-top: 1rem;
 }
 
 /* About Section */
@@ -249,6 +263,57 @@ section {
     position: absolute;
     left: 0;
     color: #666;
+}
+
+/* References Section */
+.references {
+    background-color: #f8f9fa;
+    padding: 6rem 2rem;
+}
+
+.reference-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.reference-list h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.reference-list h3:first-child {
+    margin-top: 0;
+}
+
+.reference-item {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #444;
+    padding-left: 2rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.reference-item::before {
+    content: "•";
+    position: absolute;
+    left: 0.8rem;
+    color: #666;
+}
+
+.reference-item a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.reference-item a:hover {
+    color: #004499;
+    text-decoration: underline;
 }
 
 /* Footer */

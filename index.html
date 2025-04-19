@@ -14,6 +14,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#technical">Technical</a></li>
+                <li><a href="#references">References</a></li>
             </ul>
         </nav>
     </header>
@@ -23,13 +24,19 @@
             <div class="hero-content">
                 <h1>Sound of Wind</h1>
                 
+                <p class="subtitle-2">Sonification & Sound Installation</p>
+                
+                <p class="author-name">LIU Jiayu Yolanda</p>
+                <p class="author-name">WU Zeyang Simon</p>
+                <p class="author-name">XIE Zihao</p>
+                  
             </div>
         </section>
 
         <section id="about" class="about">
             <h2>About the Project</h2>
             <div class="content">
-                <p>Sound of Wind is an interactive ssound installation that transforms environmental data into an immersive auditory experience. The project bridges the gap between meteorological data and artistic expression by converting Hong Kong's wind patterns into a dynamic sound installation.</p>
+                <p>Sound of Wind is an interactive sound installation that transforms environmental data into an immersive auditory experience. The project bridges the gap between meteorological data and artistic expression by converting Hong Kong's wind patterns into a dynamic sound installation.</p>
                 
                 <p>This installation creates a unique dialogue between natural phenomena and digital sound, allowing visitors to experience wind data through an artistic interpretation of sound and movement. The project demonstrates how environmental data can be transformed into meaningful artistic expressions, creating a new perspective on our relationship with natural phenomena.</p>
             </div>
@@ -40,19 +47,19 @@
             <div class="media-container">
                 <div class="video-showcase">
                     <div class="video-wrapper">
-                        <!-- 视频将在这里添加 -->
+                        <!-- Video placeholder until you have actual video content -->
                         <div class="video-placeholder">Installation Video Coming Soon</div>
                     </div>
                 </div>
                 <div class="image-showcase">
                     <div class="image-grid">
                         <div class="image-item">
-                            <img src="images/concept.jpg" alt="Installation Hardware Setup">
-                            <p class="caption">Physical installation setup with fans and Arduino control system</p>
+                            <img src="images/maxmsp.jpg" alt="MaxMSP Interface">
+                            <p class="caption">Sound Processing System in MaxMSP</p>
                         </div>
                         <div class="image-item">
-                            <img src="images/data-visualization.jpg" alt="Wind Data Visualization">
-                            <p class="caption">Wind speed data visualization from HK Observatory</p>
+                            <img src="images/arduino-code.jpg" alt="Arduino Code">
+                            <p class="caption">Arduino Control System Implementation</p>
                         </div>
                     </div>
                 </div>
@@ -63,18 +70,38 @@
             <h2>Technical Details</h2>
             <div class="content">
                 <div class="tech-section">
-                    <h3>Data Processing & Control System</h3>
+                    <h3>Data Collection & Processing</h3>
+                    <div class="tech-grid">
+                        <div class="tech-image">
+                            <img src="images/data collection.jpg" alt="Wind Data Collection">
+                            <p class="caption">Wind Speed Data Analysis from Hong Kong Observatory</p>
+                        </div>
+                        <div class="tech-description">
+                            <h4>Data Processing Workflow</h4>
+                            <ul>
+                                <li>Source: Hong Kong Observatory wind speed data (one year period)</li>
+                                <li>Data Processing: Excel-based cleaning and normalization</li>
+                                <li>Value Mapping: Wind speed conversion from 0-80 km/h to 0-255 scale</li>
+                                <li>Visualization: Line chart plotting for data analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-section">
+                    <h3>Sound Processing System</h3>
                     <div class="tech-grid">
                         <div class="tech-image">
                             <img src="images/maxmsp.jpg" alt="MaxMSP Patch">
                             <p class="caption">Sound Processing System in MaxMSP</p>
                         </div>
                         <div class="tech-description">
-                            <h4>Sound Processing</h4>
+                            <h4>MaxMSP Implementation</h4>
                             <ul>
-                                <li>MaxMSP patch for real-time sound generation</li>
+                                <li>Real-time sound generation and processing</li>
                                 <li>Multiple audio layers controlled by wind data</li>
                                 <li>Dynamic sound modulation based on wind patterns</li>
+                                <li>Data-driven audio parameter mapping</li>
                             </ul>
                         </div>
                     </div>
@@ -98,15 +125,22 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="tech-section">
-                    <h3>Data Collection & Processing</h3>
-                    <ul>
-                        <li>Source: Hong Kong Observatory wind speed data (one year period)</li>
-                        <li>Data Processing: Excel-based cleaning and normalization</li>
-                        <li>Value Mapping: Wind speed conversion from 0-80 km/h to 0-255 scale</li>
-                        <li>Visualization: Line chart plotting for data analysis</li>
-                    </ul>
+        <section id="references" class="references">
+            <h2>References</h2>
+            <div class="content">
+                <div class="reference-list">
+                    <h3>Data Sources</h3>
+                    <p class="reference-item">Hong Kong Observatory. (2024). Historical Weather Data. Retrieved from Hong Kong Observatory Database.</p>
+                    <p class="reference-item">Cycling '74. (2024). Max 8 Documentation. Retrieved from Cycling '74 Website.</p>
+                    <p class="reference-item">Arduino. (2024). Arduino Reference Documentation. Retrieved from Arduino Official Website.</p>
+                    
+                    <h3>Artistic References</h3>
+                    <p class="reference-item">Snibbe, S. (2005). Blow Up [Interactive Installation]. Retrieved from https://www.snibbe.com/art/blowup</p>
+                    <p class="reference-item">Palacios, D. (2006). Waves [Sound Installation]. Retrieved from https://www.danielpalacios.studio/portfolio/waves/</p>
+                    <p class="reference-item">Kempinas, Ž. (2006). Between Fans [Installation]. Retrieved from https://www.zilvinaskempinas.com/work#/o-between-fans/</p>
                 </div>
             </div>
         </section>
