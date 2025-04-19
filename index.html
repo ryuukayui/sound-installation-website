@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sound of Wind - Interactive Sound Installation</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1.3">
 </head>
 <body>
     <header>
@@ -19,26 +19,25 @@
         </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Sound of Wind</h1>
-                
-                <p class="subtitle-2">Sonification & Sound Installation</p>
-                
-                <p class="author-name">LIU Jiayu Yolanda</p>
-                <p class="author-name">WU Zeyang Simon</p>
-                <p class="author-name">XIE Zihao</p>
-                  
-            </div>
-        </section>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Sound of Wind</h1>
+            <p class="subtitle">Sonification & Sound Installation</p>
+            <p class="author">LIU Jiayu Yolanda</p>
+            <p class="author">WU Zeyang Simon</p>
+            <p class="author">XIE Zihao</p>
+        </div>
+    </section>
 
+    <main>
         <section id="about" class="about">
             <h2>About the Project</h2>
             <div class="content">
-                <p>Sound of Wind is an interactive sound installation that transforms environmental data into an immersive auditory experience. The project bridges the gap between meteorological data and artistic expression by converting Hong Kong's wind patterns into a dynamic sound installation.</p>
+                <p>"Sound of Wind" is a sound installation that will use data sonification technology to transform meteorological data into a real time interactive auditory experience. This installation employs wind speed data to control two opposing fans in real-time through Maxmsp. The speed of 2 fans corresponds to different wind speeds, and the metal fabric positioned in front of the fans collides under the airflow, creating physical interactions. These collisions are transformed into audio signals, forming a dynamic auditory experience. This installation is not merely a simple conversion of data to sound; it seeks to deeply integrate auditory and physical movement, allowing the audience to perceive changes in environmental data in an intuitive and immersive way.</p>
+
+                <p>Sonification is the use of non-speech audio to convey information or perceptualize data, as a form of data expression, offers a unique pathway for translating digital information into sensory experiences. This technology has found extensive application in scientific research, artistic creation, and data monitoring.</p>
                 
-                <p>This installation creates a unique dialogue between natural phenomena and digital sound, allowing visitors to experience wind data through an artistic interpretation of sound and movement. The project demonstrates how environmental data can be transformed into meaningful artistic expressions, creating a new perspective on our relationship with natural phenomena.</p>
+                <p>Hong Kong's unique geographical position brings about an extremely rich climate, particularly influenced by the subtropical monsoon climate. Each year, typhoons pose varying degrees of threat to the city, and the diverse wind speed data effectively reflects this.</p>
             </div>
         </section>
 
@@ -47,19 +46,22 @@
             <div class="media-container">
                 <div class="video-showcase">
                     <div class="video-wrapper">
-                        <!-- Video placeholder until you have actual video content -->
-                        <div class="video-placeholder">Installation Video Coming Soon</div>
+                        <iframe src="https://www.youtube.com/embed/x3y40zZY7Rc" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
                 <div class="image-showcase">
                     <div class="image-grid">
                         <div class="image-item">
-                            <img src="images/maxmsp.jpg" alt="MaxMSP Interface">
-                            <p class="caption">Sound Processing System in MaxMSP</p>
+                            <img src="images/1.jpg" alt="Installation View 1">
+                            <p class="caption">Sound of Wind Installation View</p>
                         </div>
                         <div class="image-item">
-                            <img src="images/arduino-code.jpg" alt="Arduino Code">
-                            <p class="caption">Arduino Control System Implementation</p>
+                            <img src="images/3.jpg" alt="Installation View 3">
+                            <p class="caption">Interactive Sound Installation Setup</p>
                         </div>
                     </div>
                 </div>
@@ -73,55 +75,40 @@
                     <h3>Data Collection & Processing</h3>
                     <div class="tech-grid">
                         <div class="tech-image">
-                            <img src="images/data collection.jpg" alt="Wind Data Collection">
-                            <p class="caption">Wind Speed Data Analysis from Hong Kong Observatory</p>
+                            <img src="images/data collection.jpg" alt="Data Collection Process">
+                            <p class="caption">Data Processing and Analysis</p>
                         </div>
                         <div class="tech-description">
                             <h4>Data Processing Workflow</h4>
-                            <ul>
-                                <li>Source: Hong Kong Observatory wind speed data (one year period)</li>
-                                <li>Data Processing: Excel-based cleaning and normalization</li>
-                                <li>Value Mapping: Wind speed conversion from 0-80 km/h to 0-255 scale</li>
-                                <li>Visualization: Line chart plotting for data analysis</li>
-                            </ul>
+                            <p>Collected daily wind speed data from the Hong Kong Observatory for the past 10 years. based on the data from 2018, processed it using Excel for data cleaning, value mapping (converting wind speed from 0–80 km/h to a 0–255 scale), and basic visualization (such as line chart plotting). The processed wind speed data was then integrated into the control logic of an interactive installation.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="tech-section">
-                    <h3>Sound Processing System</h3>
+                    <h3>Arduino Implementation</h3>
+                    <div class="tech-grid">
+                        <div class="tech-image">
+                            <img src="images/arduino-code.jpg" alt="Arduino Control System">
+                            <p class="caption">Arduino Control System for Fan Operation</p>
+                        </div>
+                        <div class="tech-description">
+                            <h4>Data Processing & Control</h4>
+                            <p>First, we will collect the daily average wind speed data from the Hong Kong Observatory for the past ten years and clean and normalize the data to fall in the range of 0-255. This range will correspond to the strength of the PWM signal output from the Arduino, which will be used to control the fan speed, and also used to control the dimension of the sound changes in Max/MSP.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-section">
+                    <h3>Max/MSP Sound Processing</h3>
                     <div class="tech-grid">
                         <div class="tech-image">
                             <img src="images/maxmsp.jpg" alt="MaxMSP Patch">
                             <p class="caption">Sound Processing System in MaxMSP</p>
                         </div>
                         <div class="tech-description">
-                            <h4>MaxMSP Implementation</h4>
-                            <ul>
-                                <li>Real-time sound generation and processing</li>
-                                <li>Multiple audio layers controlled by wind data</li>
-                                <li>Dynamic sound modulation based on wind patterns</li>
-                                <li>Data-driven audio parameter mapping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tech-section">
-                    <h3>Hardware Control</h3>
-                    <div class="tech-grid">
-                        <div class="tech-image">
-                            <img src="images/arduino-code.jpg" alt="Arduino Code">
-                            <p class="caption">Arduino Control System</p>
-                        </div>
-                        <div class="tech-description">
-                            <h4>Arduino Implementation</h4>
-                            <ul>
-                                <li>Four motor control pins (5, 6, 12, 13)</li>
-                                <li>Two speed control pins (9, 10)</li>
-                                <li>Wind speed data mapping (0-80 km/h to 0-255)</li>
-                                <li>Real-time fan speed adjustment based on data input</li>
-                            </ul>
+                            <h4>Sound Design & Mapping</h4>
+                            <p>The sound part will be done in Max/MSP and we will try to map different values of wind speed to different sound textures. For example, lower wind speeds generate soft, sparse sounds that simulate the feeling of a light breeze, while higher wind speeds translate into more complex, dense and even fractured sound fragments that symbolize the rhythm of a strong wind or storm. We do not intend to directly restore the actual sound of the wind, but rather to reproduce the sense of its presence and the historical trajectory of the climate in an abstracted way.</p>
                         </div>
                     </div>
                 </div>
@@ -129,18 +116,46 @@
         </section>
 
         <section id="references" class="references">
-            <h2>References</h2>
+            <h2>Reference & Discussion</h2>
             <div class="content">
                 <div class="reference-list">
                     <h3>Data Sources</h3>
-                    <p class="reference-item">Hong Kong Observatory. (2024). Historical Weather Data. Retrieved from Hong Kong Observatory Database.</p>
-                    <p class="reference-item">Cycling '74. (2024). Max 8 Documentation. Retrieved from Cycling '74 Website.</p>
-                    <p class="reference-item">Arduino. (2024). Arduino Reference Documentation. Retrieved from Arduino Official Website.</p>
-                    
-                    <h3>Artistic References</h3>
-                    <p class="reference-item">Snibbe, S. (2005). Blow Up [Interactive Installation]. Retrieved from https://www.snibbe.com/art/blowup</p>
-                    <p class="reference-item">Palacios, D. (2006). Waves [Sound Installation]. Retrieved from https://www.danielpalacios.studio/portfolio/waves/</p>
-                    <p class="reference-item">Kempinas, Ž. (2006). Between Fans [Installation]. Retrieved from https://www.zilvinaskempinas.com/work#/o-between-fans/</p>
+                    <ul class="data-sources">
+                        <li>Hong Kong Observatory. (2024). Historical Weather Data. Retrieved from Hong Kong Observatory Database.</li>
+                        <li>Cycling '74. (2024). Max 8 Documentation. Retrieved from Cycling '74 Website.</li>
+                        <li>Arduino. (2024). Arduino Reference Documentation. Retrieved from Arduino Official Website.</li>
+                    </ul>
+
+                    <h3>Project References</h3>
+                    <div class="reference-item">
+                        <h3>1. Blow up(2005) —— Scott Snibbe</h3>
+                        <a href="https://www.snibbe.com/art/blowup">https://www.snibbe.com/art/blowup</a>
+                        <div class="reference-images">
+                            <img src="images/refer1.jpg" alt="Blow Up Installation">
+                        </div>
+                        <p>This installation comprises two devices, Blow Up records, amplifies, and projects human breath into a room-sized field of wind.</p>
+                        <p>We were inspired by the simplicity of the installation and the choice of materials, as well as how it records human breath while letting more air move and be relates them into interaction. This work's perceptual gift human being us and the transmission of data and information bring end the idea of a fan-based digital sound installation.</p>
+                    </div>
+
+                    <div class="reference-item">
+                        <h3>2. Waves(2006) —— Daniel Palacios</h3>
+                        <a href="https://www.danielpalacios.studio/portfolio/waves/">https://www.danielpalacios.studio/portfolio/waves/</a>
+                        <div class="reference-images">
+                            <img src="images/refer2.jpg" alt="Waves Installation">
+                        </div>
+                        <p>The installation reacts to those who watch it. When the audience moves around it they influence the movements of the rope, generating visual and acoustic waves from harmonic patterns to complex ones.</p>
+                        <p>This installation inspired us to think about the relationship between material movement and space, and it occurred to us that we could use material movement as a basis for generating sound, and explore the relationship between material movement and space in this installation.</p>
+                    </div>
+
+                    <div class="reference-item">
+                        <h3>3. Between fans(2006) —— Žilvinas Kempinas</h3>
+                        <a href="https://www.zilvinaskempinas.com/work#/o-between-fans/">https://www.zilvinaskempinas.com/work#/o-between-fans/</a>
+                        <div class="reference-images">
+                            <img src="images/refer3.jpg" alt="Between Fans Installation">
+                        </div>
+                        <p>This installation takes advantage of the physical properties of the tape by placing it between two industrial fans to be blown by the wind to a state of dynamic balance.</p>
+                        <p>This installation inspired us to use the wind power of two fans as the basis for flying string materials with each fan, and using the Arduino program to let more material fly in a Mid-air state.</p>
+                    </div>
                 </div>
             </div>
         </section>
